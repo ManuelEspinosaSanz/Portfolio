@@ -1,34 +1,31 @@
 ---
-const { Title } = Astro.props;
-import ThemeToggle from "@/components/ThemeToggle.astro";
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "Manuel Espinosa | Portfolio",
+	description = "Portfolio digital de Manuel Espinosa. Desarrollador web especializado en crear experiencias digitales minimalistas y funcionales.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon.svg"
-			media="(prefers-color-scheme: light)"
-		/>
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon-dark.svg"
-			media="(prefers-color-scheme: dark)"
-		/>
-		<meta name="generator" content={Astro.generator} />
-		<title>{Title}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="Manuel Espinosa" />
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<title>{title}</title>
 	</head>
 	<body
-		class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors"
+		class="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors antialiased"
 	>
-		<nav class="p-4 justify-end flex">
-			<ThemeToggle />
-		</nav>
 		<slot />
 	</body>
 </html>
