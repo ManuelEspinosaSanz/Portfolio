@@ -5,9 +5,12 @@ interface Props {
 }
 
 const {
-	title = "Manuel Espinosa | Portfolio",
-	description = "Portfolio digital de Manuel Espinosa. Desarrollador web especializado en crear experiencias digitales minimalistas y funcionales.",
+	title = "Manuel Espinosa - Full Stack Developer | Portfolio",
+	description = "Portfolio de Manuel Espinosa, Full Stack Developer especializado en React, Node.js y desarrollo web moderno. Explora mis proyectos y experiencia profesional.",
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("/og-image.jpg", Astro.site);
 ---
 
 <!doctype html>
@@ -15,13 +18,85 @@ const {
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+
+		<!-- SEO Principal -->
+		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="author" content="Manuel Espinosa" />
+		<meta
+			name="keywords"
+			content="Manuel Espinosa, Full Stack Developer, Desarrollador Web, React, Node.js, JavaScript, TypeScript, Portfolio"
+		/>
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content="Manuel Espinosa Portfolio" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+		<meta name="twitter:creator" content="@tuusuario" />
+
+		<!-- JSON-LD Schema.org para mejor SEO -->
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				"@context": "https://schema.org",
+				"@type": "Person",
+				name: "Manuel Espinosa",
+				jobTitle: "Full Stack Developer",
+				url: canonicalURL.toString(),
+				sameAs: [
+					"https://github.com/manuelespinosasanz",
+					"https://linkedin.com/in/tuusuario",
+				],
+				knowsAbout: [
+					"React",
+					"Node.js",
+					"JavaScript",
+					"TypeScript",
+					"Web Development",
+				],
+				description: description,
+			})}
+		/>
+
+		<!-- Google Fonts - Poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 
 		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
 
 		<title>{title}</title>
+
+		<style is:global>
+			* {
+				scroll-behavior: smooth;
+			}
+
+			html {
+				scroll-padding-top: 80px;
+			}
+		</style>
 	</head>
 	<body
 		class="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors antialiased"
