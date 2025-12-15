@@ -1,7 +1,7 @@
 // src/config.ts
 export const siteConfig = {
     name: "Manuel Espinosa",
-    role: "Full Stack Developer",
+    role: "Web Developer",
     description: "Construyo experiencias web modernas y minimalistas. Especializado en transformar ideas en productos digitales funcionales y accesibles.",
     email: "mespinosasanz@gmail.com",
     social: {
@@ -52,23 +52,9 @@ export const projects = [
 export const experience = [
     {
         company: "Tech Solutions Inc.",
-        position: "Senior Full Stack Developer",
-        period: "2022 - Presente",
-        description: "Desarrollo y mantenimiento de aplicaciones web empresariales. Liderazgo técnico de un equipo de 5 desarrolladores.",
-        technologies: ["React", "Node.js", "AWS", "Docker"],
-    },
-    {
-        company: "StartUp XYZ",
-        position: "Frontend Developer",
-        period: "2020 - 2022",
-        description: "Creación de interfaces de usuario responsivas y accesibles. Implementación de arquitectura frontend escalable.",
-        technologies: ["Vue.js", "TypeScript", "TailwindCSS"],
-    },
-    {
-        company: "Digital Agency",
-        position: "Web Developer",
-        period: "2018 - 2020",
-        description: "Desarrollo de sitios web y aplicaciones para diversos clientes. Colaboración directa con diseñadores y clientes.",
-        technologies: ["HTML", "CSS", "JavaScript", "WordPress"],
+        position: "Junior Web Developer",
+        period: "Febrero 2026 - Junio 2026",
+        description: "Desarrollo y mantenimiento de aplicaciones web empresariales. Modernizando y actualizando código.",
+        technologies: ["Vue.js"],
     },
 ];
