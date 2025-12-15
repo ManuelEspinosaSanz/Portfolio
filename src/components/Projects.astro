@@ -3,7 +3,7 @@ import { projects } from "@/config";
 ---
 
 <section id="proyectos" class="min-h-screen py-24 px-4 sm:px-6">
-	<div class="max-w-6xl mx-auto">
+	<div class="max-w-4xl mx-auto">
 		<!-- Título -->
 		<div class="mb-16">
 			<h2 class="text-4xl sm:text-5xl font-light mb-2">Proyectos</h2>
@@ -22,12 +22,12 @@ import { projects } from "@/config";
 						href={project.demo || project.github}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="block mb-4 aspect-video bg-gray-100 dark:bg-gray-900 overflow-hidden"
+						class="block mb-4 aspect-video bg-gray-100 dark:bg-gray-900 overflow-hidden border border-gray-200 dark:border-gray-800"
 					>
 						<img 
 							src={project.image} 
 							alt={project.title}
-							class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+							class="w-full h-full object-fill group-hover:scale-105 transition-transform duration-700 ease-out"
 							loading="lazy"
 						/>
 					</a>
