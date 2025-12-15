@@ -1,115 +1,22 @@
 ---
-const year = new Date().getFullYear();
-import ThemeToggle from "@/components/ThemeToggle.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Hero from "@/components/Hero.astro";
+import Projects from "@/components/Projects.astro";
+import Experience from "@/components/Experience.astro";
+import Contact from "@/components/Contact.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon.svg"
-			media="(prefers-color-scheme: light)"
-		/>
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon-dark.svg"
-			media="(prefers-color-scheme: dark)"
-		/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Portfolio — Coming Soon</title>
-	</head>
-	<body
-		class="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors flex items-center justify-center px-4 sm:px-6"
-	>
-		<!-- Theme Toggle minimalista -->
-		<div class="absolute top-4 right-4 sm:top-8 sm:right-8">
-			<ThemeToggle />
-		</div>
+<Layout>
+	<Header />
 
-		<!-- Contenido principal -->
-		<main class="max-w-2xl w-full py-8 sm:py-0">
-			<!-- Barra de progreso minimalista -->
-			<div class="mb-12 sm:mb-16">
-				<div
-					class="h-px w-full bg-gray-200 dark:bg-gray-800 relative overflow-hidden"
-				>
-					<div
-						class="absolute inset-0 bg-gray-900 dark:bg-gray-100 animate-progress"
-					>
-					</div>
-				</div>
-			</div>
+	<main>
+		<Hero />
+		<Projects />
+		<Experience />
+		<Contact />
 
-			<!-- Título -->
-			<h1
-				class="text-4xl sm:text-5xl md:text-7xl font-light tracking-tight mb-4 sm:mb-6"
-			>
-				Coming Soon
-			</h1>
-
-			<!-- Descripción -->
-			<p
-				class="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-400 font-light leading-relaxed mb-8 sm:mb-12 max-w-lg"
-			>
-				Actualmente estoy construyendo mi portfolio digital. Un espacio
-				minimalista para mostrar mi trabajo y experiencia.
-			</p>
-
-			<!-- Info de contacto minimalista -->
-			<div class="space-y-3 text-sm text-gray-600 dark:text-gray-500">
-				<div class="flex items-center gap-3 flex-wrap">
-					<span class="w-16 sm:w-20 text-gray-500 dark:text-gray-600"
-						>Email</span
-					>
-					<a
-						href="mailto:mespinosasanz@gmail.com"
-						class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors break-all"
-					>
-						mespinosasanz@gmail.com
-					</a>
-				</div>
-				<div class="flex items-center gap-3 flex-wrap">
-					<span class="w-16 sm:w-20 text-gray-500 dark:text-gray-600"
-						>GitHub</span
-					>
-					<a
-						href="https://github.com/manuelespinosasanz"
-						target="_blank"
-						class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors break-all"
-					>
-						@manuelespinosasanz
-					</a>
-				</div>
-			</div>
-
-			<!-- Footer minimalista -->
-			<div
-				class="mt-16 sm:mt-24 pt-8 border-t border-gray-200 dark:border-gray-800"
-			>
-				<p class="text-xs text-gray-500 dark:text-gray-600 font-light">
-					© {year} — Launching soon
-				</p>
-			</div>
-		</main>
-	</body>
-</html>
-
-<style>
-	@keyframes progress {
-		0% {
-			transform: translateX(-100%);
-		}
-		100% {
-			transform: translateX(100%);
-		}
-	}
-
-	.animate-progress {
-		animation: progress 2s ease-in-out infinite;
-	}
-</style>
+		<!-- Contenido temporal mientras construyes -->
+		
+	</main>
+</Layout>

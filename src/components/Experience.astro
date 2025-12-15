@@ -1,0 +1,105 @@
+---
+import { experience } from "@/config";
+---
+
+<section id="experiencia" class="min-h-screen py-24 px-4 sm:px-6">
+	<div class="max-w-4xl mx-auto">
+		<!-- Título -->
+		<div class="mb-16">
+			<h2 class="text-4xl sm:text-5xl font-light mb-2">Experiencia</h2>
+		</div>
+
+		<!-- Timeline -->
+		<div class="relative">
+			<!-- Línea vertical -->
+			<div class="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 hidden sm:block"></div>
+
+			<!-- Items -->
+			<div class="space-y-12">
+				{experience.map((job, index) => (
+					<article 
+						class="relative pl-0 sm:pl-8 fade-in-section"
+						style={`animation-delay: ${index * 150}ms`}
+					>
+						<!-- Punto en el timeline -->
+						<div class="absolute left-0 top-1 w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full hidden sm:block" style="transform: translateX(-0.3125rem)"></div>
+
+						<!-- Contenido -->
+						<div>
+							<!-- Período -->
+							<span class="text-sm text-gray-500 dark:text-gray-500 font-light mb-2 block">
+								{job.period}
+							</span>
+
+							<!-- Posición y empresa -->
+							<h3 class="text-xl font-light mb-1">
+								{job.position}
+							</h3>
+							<p class="text-base text-gray-600 dark:text-gray-400 mb-3">
+								{job.company}
+							</p>
+
+							<!-- Descripción -->
+							<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+								{job.description}
+							</p>
+
+							<!-- Tecnologías -->
+							<div class="flex flex-wrap gap-2">
+								{job.technologies.map((tech) => (
+									<span class="text-xs text-gray-500 dark:text-gray-500">
+										{tech}
+									</span>
+								))}
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	.fade-in-section {
+		opacity: 0;
+		animation: fadeInUp 0.8s ease-out forwards;
+	}
+</style>
+
+<script>
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -80px 0px'
+	};
+	
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.style.animationPlayState = 'running';
+			}
+		});
+	}, observerOptions);
+	
+	function initExperience() {
+		const articles = document.querySelectorAll('#experiencia article');
+		articles.forEach(article => {
+			article.style.animationPlayState = 'paused';
+			observer.observe(article);
+		});
+	}
+	
+	document.addEventListener('DOMContentLoaded', initExperience);
+	document.addEventListener('astro:after-swap', initExperience);
+</script>

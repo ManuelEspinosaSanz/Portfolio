@@ -1,0 +1,8 @@
+/* TEAM */
+Developer: Manuel Espinosa
+Site: https://manuelespinosa.dev
+Location: España
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Components: Astro, React, TailwindCSS
