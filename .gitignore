@@ -22,6 +22,4 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-# Vercel config
-vercel.json
+.vscode
