@@ -2,12 +2,12 @@
 
 Portfolio minimalista y moderno construido con Astro y TailwindCSS.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://tudominio.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://www.manuelespinosa.dev)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 🚀 Demo
 
-Visita el portfolio en vivo: [tudominio.com](https://www.manuelespinosa.dev)
+Visita el portfolio en vivo: [www.manuelespinosa.dev](https://www.manuelespinosa.dev)
 
 ## ✨ Características
 
@@ -122,7 +122,7 @@ MIT License - siéntete libre de usar este portfolio como template para el tuyo.
 
 ## 🤝 Contacto
 
-- Portfolio: [tudominio.com](https://www.manuelespinosa.dev)
+- Portfolio: [manuelespinosa.dev](https://www.manuelespinosa.dev)
 - GitHub: [@manuelespinosasanz](https://github.com/manuelespinosasanz)
 - LinkedIn: [Manuel Espinosa](https://linkedin.com/in/manuelespinosasanz)
 - Email: mespinosasanz@gmail.com
