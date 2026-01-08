@@ -19,7 +19,18 @@ export const projects = [
         github: "",
         demo: "https://www.tasotucoche.es/",
         featured: false,
+        comingSoon: false
     },
+    {
+    title: "Próximamente",
+    description: "Estoy trabajando en un nuevo proyecto. Mantente atento para ver lo que viene...",
+    image: "/projects/coming-soon.jpg",
+    tags: ["Astro", "Tailwind CSS", "API"],
+    github: null,
+    demo: null,
+    featured: false,
+    comingSoon: true,
+  },
     
 ];
 
