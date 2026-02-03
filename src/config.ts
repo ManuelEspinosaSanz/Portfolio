@@ -31,6 +31,7 @@ export const projects = [
         featured: false,
         comingSoon: false
     },
+    /*
     {
         title: "Próximamente",
         description: "Estoy trabajando en un nuevo proyecto. Mantente atento para ver lo que viene...",
@@ -41,6 +42,7 @@ export const projects = [
         featured: false,
         comingSoon: true,
     },
+    */
 
 ];
 
