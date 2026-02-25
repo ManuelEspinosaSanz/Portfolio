@@ -1,4 +1,3 @@
-// src/config.ts
 export const siteConfig = {
     name: "Manuel Espinosa",
     role: "Web Developer",
@@ -6,7 +5,7 @@ export const siteConfig = {
     email: "mespinosasanz@gmail.com",
     social: {
         github: "https://github.com/manuelespinosasanz",
-        linkedin: "https://linkedin.com/in/manuelespinosasanz",
+        linkedin: "linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=manuelespinosasanz",
     },
 };
 
