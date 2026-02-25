@@ -5,7 +5,7 @@ export const siteConfig = {
     email: "mespinosasanz@gmail.com",
     social: {
         github: "https://github.com/manuelespinosasanz",
-        linkedin: "linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=manuelespinosasanz",
+        linkedin: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=manuelespinosasanz",
     },
 };
 
