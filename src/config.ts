@@ -20,6 +20,7 @@ export const projects = [
         featured: true, // Es un proyecto completo, merece estar destacado
         comingSoon: false,
     },
+    /*
     {
         title: "Landing Page - Compraventa de coches",
         description: "Plataforma para uso de captación de clientes de compra y venta de coches. Con un diseño moderno, responsive y optimizado.",
@@ -30,7 +31,6 @@ export const projects = [
         featured: false,
         comingSoon: false
     },
-    /*
     {
         title: "Próximamente",
         description: "Estoy trabajando en un nuevo proyecto. Mantente atento para ver lo que viene...",
@@ -47,10 +47,10 @@ export const projects = [
 
 export const experience = [
     {
-        company: "Freelance Developer",
-        position: "Junior Web Developer",
-        period: "2025 - Actualidad",
-        description: "Desarrollo y mantenimiento de aplicaciones web empresariales. Modernizando y actualizando código.",
-        technologies: ["Astro", "Tailwind CSS", "React"],
+        company: "Altia",
+        position: "Analista de Datos - Prácticas",
+        period: "Febrero 2026 - Actualidad",
+        description: "Optimización y limpieza de datos, creación de dashboards para clientes, y construir información en a partir de los datos.",
+        technologies: ["Power BI", "Snowflake", "Python"],
     },
 ];
